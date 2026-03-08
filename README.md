@@ -259,7 +259,7 @@ python main.py /path/to/your/project
 
 ---
 
-# 🤖 Autonomous Workflow
+#  Autonomous Workflow
 
 ## 1. Open project
 
