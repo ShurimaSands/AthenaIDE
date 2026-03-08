@@ -53,7 +53,7 @@ Clean dark-themed interface built with **PySide6 / Qt**.
 
 ---
 
-# 📋 Requirements
+#  Requirements
 
 ## System Requirements
 
@@ -112,7 +112,7 @@ Recommended context size:
 
 ---
 
-# 🚀 Installation
+#  Installation
 
 ## 1. Clone the repository
 
