@@ -1,65 +1,79 @@
 # Athena IDE
 
-**AI-First Local IDE with Integrated Programming Agent**
+**Local AI-Based IDE with an Integrated Programming Agent**
 
-Athena IDE is a local AI-powered integrated development environment that provides support for autonomous programming directly on your desktop. Developed with Python and PySide 6, and connected to Koboldcpp and a gguf model, it can safely plan and modify code under your supervision.
-![Athena IDE](https://img.shields.io/badge/Python-3.8+-blue)
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-orange)
+Athena IDE is a **local AI-powered integrated development environment** that provides autonomous programming assistance directly on your desktop.
 
-> **Watch it in action:**  
-> ![Athena IDE Demo](URL_AQUI_DE_TU_VIDEO_O_GIF_DE_LA_CALCULADORA.gif)  
-> *(Add your GIF URL showcasing the HTML/JS calculator generation)*
+Built with **Python** and **PySide6**, and capable of connecting to **KoboldCPP** using a **GGUF model**, it allows you to safely plan and modify code under your supervision.
 
 ---
 
-# Killer Features
+## Watch it in action
+
+> (Add the URL of your GIF showing the HTML/JS calculator generation)
+
+---
+
+# Key Features
+
 ## Autonomous File Management
 
-Athena can autonomously open, create, edit, and delete project files depending on the specific needs of your requested task. Instead of just giving you code snippets in a chat window, it acts directly on your workspace to build the solution step by step.
+Athena can autonomously **open, create, edit, and delete project files** based on the needs of the requested task.
+
+Instead of just showing code snippets in a chat window, it interacts directly with your workspace and builds the solution step by step.
+
+---
 
 ## Anti-Hallucination Memory
 
-Enforces a strict `athena_plan.md` project index.
+Athena uses a strict project index called:
 
-The AI is structurally forced to **read reality (`read_file`) before modifying code**, preventing hallucinations.
+```
+athena_plan.md
+```
 
-
-
-
-## Privacy First (Zero-Cloud)
-
-Your code **never leaves your machine**.
-
-## Modern Native UI
-
-Clean **dark-themed UI built with PySide6 / Qt**.
-
-No Electron or Chromium bloat.
-
-## Privacy First (Zero-Cloud)
-
-Your code **never leaves your machine**.
-
-## Modern Native UI
-
-Clean **dark-themed UI built with PySide6 / Qt**.
-
-No Electron or Chromium bloat.
+The AI is structurally forced to **read the actual files (`read_file`) before modifying code**, reducing hallucinations and ensuring that changes are grounded in the real structure of the project.
 
 ---
 
-#  Requirements
+## Privacy First (Zero-Cloud)
+
+Your code **never leaves your machine**.
+
+Everything runs locally using your own models.
+
+---
+
+## Modern Native UI
+
+Clean dark-themed interface built with **PySide6 / Qt**.
+
+- No Electron
+- No Chromium overhead
+
+---
+
+# 📋 Requirements
 
 ## System Requirements
 
-- **Python:** 3.8+
-- **Operating System:** Windows / Linux / macOS
-- **RAM:**  
-  - 8GB minimum  
-  - 16GB recommended
-- **Storage:**  
-  - 500MB for application  
-  - Space for GGUF models
+**Python:** 3.8+
+
+**Operating System**
+
+- Windows
+- Linux
+- macOS
+
+**RAM**
+
+- 8 GB minimum
+- 16 GB recommended
+
+**Storage**
+
+- 500 MB for the application
+- Additional space for GGUF models
 
 ---
 
@@ -67,7 +81,7 @@ No Electron or Chromium bloat.
 
 - **KoboldCPP** – Local LLM server
 - **PySide6 >= 6.6** – GUI framework
-- **requests** – HTTP client
+- **requests** – HTTP client for API communication
 
 ---
 
@@ -98,9 +112,9 @@ Recommended context size:
 
 ---
 
-#  Installation
+# 🚀 Installation
 
-## 1. Clone the Repository
+## 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/athena-ide.git
@@ -109,7 +123,7 @@ cd athena-ide
 
 ---
 
-## 2. Install Python Dependencies
+## 2. Install Python dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -142,7 +156,7 @@ chmod +x koboldcpp
 
 ---
 
-## 4. Download a Model
+## 4. Download a model
 
 Place your **GGUF model** in the project root.
 
@@ -176,7 +190,7 @@ athena-ide/
 │   └── theme.py
 │
 ├── config.py                # Global configuration
-├── main.py                  # Application entry point
+├── main.py                  # Entry point
 ├── requirements.txt
 └── README.md
 
@@ -187,22 +201,22 @@ athena-ide/
 
 ---
 
-# Architecture
+#  Architecture
 
 | Component | Description |
 |-----------|-------------|
-| **AthenaAgent** | Core programming agent that analyzes code, plans actions, and performs correction loops |
-| **ActionEngine** | Executes file modifications safely using `.athena_backups` |
-| **StreamWorker** | Asynchronous communication with KoboldCPP via Qt Threads |
-| **MainWindow** | PySide6 UI containing the editor, project explorer, and AI panel |
+| AthenaAgent | Core programming agent that analyzes code, plans actions, and executes correction loops |
+| ActionEngine | Safely executes file modifications using `.athena_backups` |
+| StreamWorker | Manages asynchronous communication with KoboldCPP using Qt threads |
+| MainWindow | PySide6 interface containing the editor, project explorer, and AI panel |
 
 ---
 
-# Configuration
+#  Configuration
 
 Athena IDE uses a **JSON configuration file** stored in the system's application data folder.
 
-## Default Configuration
+## Default configuration
 
 ```json
 {
@@ -237,7 +251,7 @@ run.bat
 python main.py
 ```
 
-### Launch with Project Path
+### Launch with project path
 
 ```bash
 python main.py /path/to/your/project
@@ -245,54 +259,68 @@ python main.py /path/to/your/project
 
 ---
 
-# The Autonomous Workflow
+# 🤖 Autonomous Workflow
 
-## 1. Open Project
+## 1. Open project
 
-Load your project folder via the **project explorer**.
+Load your project folder using the **project explorer**.
 
 ---
 
-## 2. Request Actions
+## 2. Request actions
 
 Ask the AI to build something.
 
 Example:
 
 ```
-Build a traditional calculator using HTML and JS
+Build a traditional calculator using HTML and JavaScript
 ```
 
 ---
 
-## 3. Review Plan
+## 3. Review the plan
 
-The agent will generate a **step-by-step plan**.
+The agent will generate a **step-by-step plan** describing how it will complete the task.
 
 ---
 
-## 4. Approve & Execute automatic
+## 4. Approve and execute
+
+Once the plan is approved, Athena will automatically execute the steps:
+
+- Read project files  
+- Modify code  
+- Apply changes  
+- Iterate until the task is complete  
 
 ---
 
 ## 5. Monitor
 
-You can watch:
+You can observe:
 
-- action plan progress
-- file modifications
-- live token counter
+- Plan progress  
+- Modified files  
+- Token usage  
+- Agent activity  
 
-## BYOB (Bring Your Own Backend)
+---
 
-Natively optimized for **KoboldCPP**, but built on a **standard REST API architecture**.
+#  BYOB (Bring Your Own Backend)
 
-Supported backends include:
+Athena is optimized for **KoboldCPP**, but it uses a **standard REST architecture**, allowing it to connect to other backends such as:
 
 - Ollama
 - LM Studio
 - vLLM
 
-Simply change the backend URL in the configuration.
+You only need to change the backend URL in the configuration.
 
-Athena ide By Pragmir
+---
+
+# Author
+
+Created by **Pragmir**
+
+Athena IDE is an experimental project exploring **local AI agents for software development**.
