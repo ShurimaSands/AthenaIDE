@@ -4,7 +4,6 @@
 
 Athena IDE is a local AI-powered integrated development environment that provides support for autonomous programming directly on your desktop. Developed with Python and PySide 6, and connected to Koboldcpp and a gguf model, it can safely plan and modify code under your supervision.
 ![Athena IDE](https://img.shields.io/badge/Python-3.8+-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-orange)
 
 > **Watch it in action:**  
