@@ -48,7 +48,7 @@ No Electron or Chromium bloat.
 
 ---
 
-# 📋 Requirements
+#  Requirements
 
 ## System Requirements
 
@@ -98,7 +98,7 @@ Recommended context size:
 
 ---
 
-# 🚀 Installation
+#  Installation
 
 ## 1. Clone the Repository
 
@@ -198,7 +198,7 @@ athena-ide/
 
 ---
 
-# ⚙️ Configuration
+# Configuration
 
 Athena IDE uses a **JSON configuration file** stored in the system's application data folder.
 
