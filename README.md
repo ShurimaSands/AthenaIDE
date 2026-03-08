@@ -12,7 +12,7 @@ Athena IDE is a local AI-powered integrated development environment that provide
 
 ---
 
-# 🌟 Killer Features
+# Killer Features
 ## Autonomous File Management
 
 Athena can autonomously open, create, edit, and delete project files depending on the specific needs of your requested task. Instead of just giving you code snippets in a chat window, it acts directly on your workspace to build the solution step by step.
@@ -187,7 +187,7 @@ athena-ide/
 
 ---
 
-# 🏗️ Architecture
+# Architecture
 
 | Component | Description |
 |-----------|-------------|
@@ -221,7 +221,7 @@ Athena IDE uses a **JSON configuration file** stored in the system's application
 
 ---
 
-# 🎮 Usage
+# Usage
 
 ## Launch the IDE
 
@@ -245,7 +245,7 @@ python main.py /path/to/your/project
 
 ---
 
-# 🤖 The Autonomous Workflow
+# The Autonomous Workflow
 
 ## 1. Open Project
 
